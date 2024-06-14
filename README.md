@@ -1,13 +1,49 @@
 # P2 do módulo 6
 Identificar todas as faces presentes no primeiro plano de um vídeo de teste.
 ---
-Para ver o video de demonstração [clique aqui]()
+
+![alt text](output.gif)
+
+Para ver o video de demonstração [clique aqui](https://drive.google.com/file/d/1aHC_g3sirIszAARxdUwIU6AOx_OYZzrn/view?usp=sharing)
+
+---
+# Execução
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/rafaelarojas/teleop2
+```
+
+2. Crie uma Venv:
+```bash
+python3 -m venv venv
+```
+
+3. Ative a Venv:
+```bash
+source venv/bin/activate
+```
+
+4. Instale as dependências do arquivo `requirements.txt`
+```bash
+pip install -r requirements.txt
+```
+
+5. Certifique que o [OpenCV](https://opencv.org/) está instalado:
+```bash
+pip install cv2
+```
+
+6. Por fim, para executar o arquivo rode o comando:
+```bash
+python3 main.py
+```
 
 ---
 ### Perguntas técnicas 
 
 2.1
-O método de detecção escolhido foi o **Haar Cascade**
+O método de detecção escolhido foi o **Haar Cascade**.
 O Haar Cascade é baseado em características de Haar, que são padrões visuais simples, como bordas, linhas e variações de intensidade em uma imagem. Cada característica é representada por um grupo de retângulos pretos e brancos adjacentes. Para calcular rapidamente essas características, o algoritmo utiliza uma estrutura chamada Imagem Integral. A Imagem Integral permite que qualquer soma de pixels em um retângulo da imagem seja calculada em tempo constante. Além disso, o Haar Cascade emprega o algoritmo AdaBoost para reduzir ainda mais a complexidade da classificação de imagens, identificando as características mais relevantes do objeto alvo e eliminando o restante. O Haar Cascade também aplica os elementos estruturais em cascata, o que ajuda a eliminar ainda mais os ruídos.
 
 
@@ -25,8 +61,11 @@ O Haar Cascade é baseado em características de Haar, que são padrões visuais
 **2.3**
 
 1 - **CNN**: As CNNs das listadas são as mais eficazes na detecção de emoções, pois podem aprender características complexas e sutis das expressões faciais Elas podem capturar variações nas expressões devido à sua capacidade de extrair diferentes níveis de características hierárquicas. Também pode ser implementado usando bibliotecas populares como TensorFlow e PyTorch. 
+
 2 - **Haar Cascade**: Embora o Haar Cascade possa ser usado para detectar faces, ele não é tão eficaz para detectar emoções devido à falta de capacidade para capturar detalhes, nesse caso, expressões. Para implentar para detecção de emoções pode ser implementado com OpenCV mas  não será tão preciso.
+
 3 - **Correlação Cruzada**: A correlação cruzada é eficaz para comparar padrões específicos, mas não é adequada para a detecção de emoções. Ademais, também não é apropriada para detectar nuânces, por ser uma implementação muito simples, além de iluminação e ângulação poder atrapalhar na detecção da emoção.
+
 4 - **NN**: Rede Neural Linear é incapaz de capturar caracteristicas não lineares, como ela não consegue se quer detectar uma face, o intuito de detectar emoções em uma face através dela também se torna inválido.
 
 
